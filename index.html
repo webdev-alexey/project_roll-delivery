@@ -31,11 +31,44 @@
         </div>
 
         <div class="col-md-4">
-          <div class="card mb-4" id="emptyBasket">
+          <div class="card mb-4" id="cart">
             <div class="card-body">
               <h5 class="card-title">Ваш заказ</h5>
-              <div class="alert alert-secondary" role="alert">
+              <div class="alert alert-secondary" role="alert" id="cartEmpty">
                 Корзина пуста
+              </div>
+
+              <div class="cart-wrapper">
+                <div id="cartItemsHolder"></div>
+
+                <div class="cart-total none" id="cartTotal">
+                  <p>
+                    <span class="h5">Доставка:</span>
+                    <span class="delivery-cost" id="deliveryPriceContainer">
+                    </span>
+                  </p>
+                  <p>
+                    <span class="h5">Итого:</span>
+                    <span class="total-price" id="cartTotalPrice"></span>
+                    <span class="rouble">₽</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-body border-top none" id="makeOrder">
+                <h5 class="card-title">Оформить заказ</h5>
+                <form>
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Ваш номер телефона"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Заказать
+                  </button>
+                </form>
               </div>
             </div>
           </div>
